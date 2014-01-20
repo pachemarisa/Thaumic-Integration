@@ -1,8 +1,8 @@
 @echo off
 :: Variables
-set FORGE=1.6.4-9.11.1.953
+set FORGE=1.6.4-9.11.1.965
 set PATH=%PATH%;./gnuwin32
-title Aether II Development Workspace Setup (Forge %FORGE%)
+title Thaumic Intergration Development Workspace Setup (Forge %FORGE%)
 
 :: Download Forge
 IF NOT EXIST forge-%FORGE%-src.zip (
