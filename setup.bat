@@ -2,7 +2,7 @@
 :: Variables
 set FORGE=1.6.4-9.11.1.965
 set PATH=%PATH%;./gnuwin32
-title Thaumic Intergration Development Workspace Setup (Forge %FORGE%)
+title Thaumic Integration Development Workspace Setup (Forge %FORGE%)
 
 :: Download Forge
 IF NOT EXIST forge-%FORGE%-src.zip (

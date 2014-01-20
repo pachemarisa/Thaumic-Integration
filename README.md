@@ -1,4 +1,4 @@
-Thaumic-Intergration
+Thaumic-Integration
 ====================
 
 Devs:
