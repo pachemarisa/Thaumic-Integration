@@ -1,0 +1,9 @@
+/eclipse/
+/forge/
+/forge-*-src.zip
+/minecraftforge-*.zip
+/*.ini
+/eclipse application/
+.DS_Store
+/eclipse  workspace/
+Thumbs.db
