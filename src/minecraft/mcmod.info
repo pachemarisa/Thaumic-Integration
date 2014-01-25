@@ -1,0 +1,36 @@
+[
+  {
+    "modid": "ThaumicIntegration",
+    "name": "Thaumic Integration",
+    "description": "",
+    "version": "0.0.0.0",
+    "mcversion": "1.6.4",
+    "url": "",
+    "updateUrl": "",
+    "authors": [
+      "alexbegt", "Drullkus", "DSMario64"
+    ],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "parent":"",
+    "dependencies": []
+  },
+  {
+    "modid": "ThaumicIntegration-Preloader",
+    "name": "Thaumic Integration PreLoader",
+    "description": "Preloader for Thaumic Integration",
+    "version": "0.0.0.0",
+    "mcversion": "1.6.4",
+    "url": "",
+    "updateUrl": "",
+    "authors": [
+      "alexbegt", "Drullkus", "DSMario64"
+    ],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "parent":"",
+    "dependencies": []
+  }
+]

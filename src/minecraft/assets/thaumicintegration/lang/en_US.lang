@@ -1,0 +1,6 @@
+# MISC
+itemGroup.ThaumicIntegration=Thaumic Integration
+
+# ITEM NAMES
+item.thaumicintegration:potatoesMashed.name=Mashed Potatoes
+item.thaumicintegration:upgradepartsperditioVoid.name=Perditio Void Modifier
