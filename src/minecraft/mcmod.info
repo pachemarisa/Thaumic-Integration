@@ -8,10 +8,10 @@
     "url": "",
     "updateUrl": "",
     "authors": [
-      "alexbegt", "Drullkus", "DSMario64"
+      "alexbegt", "Drullkus", "Dsmario64"
     ],
     "credits": "",
-    "logoFile": "",
+    "logoFile": "/assets/thaumicintegration/textures/Logo.png",
     "screenshots": [],
     "parent":"",
     "dependencies": []
@@ -25,10 +25,10 @@
     "url": "",
     "updateUrl": "",
     "authors": [
-      "alexbegt", "Drullkus", "DSMario64"
+      "alexbegt", "Drullkus", "Dsmario64"
     ],
     "credits": "",
-    "logoFile": "",
+    "logoFile": "/assets/thaumicintegration/textures/Logo.png",
     "screenshots": [],
     "parent":"",
     "dependencies": []
