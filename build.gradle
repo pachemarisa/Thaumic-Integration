@@ -9,42 +9,30 @@ buildscript {
             name = "sonatype"
             url = "https://oss.sonatype.org/content/repositories/snapshots/"
         }
-        ivy {
-            name 'Forge FS legacy'
-            artifactPattern "http://files.minecraftforge.net/[module]/[module]-dev-[revision].[ext]"
-        }
-        ivy {
-            name 'CB FS'
-            artifactPattern "http://www.chickenbones.craftsaddle.org/Files/New_Versions/1.6.4/[module]-dev%20[revision].[ext]"
-            }
-        ivy {
-            name 'REQUIRED FS'
-            artifactPattern "http://play.aethercommunity.com/files/[module]-[revision].[ext]"
-        }
     }
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:1.0-SNAPSHOT'
     }
 }
 
-//repositories {
-//    ivy {
-//        name 'Forge FS legacy'
-//        artifactPattern "http://files.minecraftforge.net/[module]/[module]-dev-[revision].[ext]"
-//    }
-//    ivy {
-//        name 'CB FS'
-//        artifactPattern "http://www.chickenbones.craftsaddle.org/Files/New_Versions/1.6.4/[module]-dev%20[revision].[ext]"
-//    }
-//    ivy {
-//        name 'REQUIRED FS'
-//        artifactPattern "http://play.aethercommunity.com/files/[module]-[revision].[ext]"
-//    }
-//    maven {
-//        name 'ForgeFS'
-//        url 'http://files.minecraftforge.net/maven'
-//     }
-//}
+repositories {
+    ivy {
+        name 'Forge FS legacy'
+        artifactPattern "http://files.minecraftforge.net/[module]/[module]-dev-[revision].[ext]"
+    }
+    ivy {
+        name 'CB FS'
+        artifactPattern "http://www.chickenbones.craftsaddle.org/Files/New_Versions/1.6.4/[module]-dev%20[revision].[ext]"
+    }
+    ivy {
+        name 'REQUIRED FS'
+        artifactPattern "http://play.aethercommunity.com/files/[module]-[revision].[ext]"
+    }
+    maven {
+        name 'ForgeFS'
+        url 'http://files.minecraftforge.net/maven'
+     }
+}
 
 // Load ForgeGradle
 apply plugin: 'forge'
