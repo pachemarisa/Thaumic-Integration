@@ -6,6 +6,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+import tconstruct.preloader.TConstructLoaderContainer;
+import tconstruct.preloader.helpers.PropertyManager.PropAccessException;
 import net.teamti.thaumicintegration.asm.TICorePlugin;
 
 public class PropertyManager
@@ -17,6 +19,8 @@ public class PropertyManager
 
 	public static final String propFileName = "TIPreloader.cfg";
 
+	public static boolean asmInterfaceRepair_verboseLog = false;
+	
 	public static boolean getOrCreateProps() throws PropAccessException
 	{
 		File fp = new File("config/" + propFileName);
@@ -26,10 +30,12 @@ public class PropertyManager
 			// Attempt read
 			try
 			{
-				TICorePlugin.logger.info("Found a properties file. Attempting load...");
+				TConstructLoaderContainer.logger.info("Found a properties file. Attempting load...");
 				props.load(new FileInputStream(fp));
 
-				TICorePlugin.logger.info("Loaded properties successfully. Using specified settings.");
+				asmInterfaceRepair_verboseLog = props.getProperty("asmInterfaceRepair_verboseLog", "false").equalsIgnoreCase("true");
+
+				TConstructLoaderContainer.logger.info("Loaded properties successfully. Using specified settings.");
 			}
 			catch (IOException ex)
 			{
@@ -43,10 +49,12 @@ public class PropertyManager
 			{
 				if (fp.createNewFile())
 				{
-					TICorePlugin.logger.info("Creating new properties file, as none found...");
+					TConstructLoaderContainer.logger.info("Creating new properties file, as none found...");
+
+					props.setProperty("asmInterfaceRepair_verboseLog", "false");
 
 					props.store(new FileOutputStream(fp), null);
-					TICorePlugin.logger.info("Created properties file; using defaults this run.");
+					TConstructLoaderContainer.logger.info("Created properties file; using defaults this run.");
 				}
 				else
 				{

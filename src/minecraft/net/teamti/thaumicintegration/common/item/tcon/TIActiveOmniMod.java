@@ -1,4 +1,4 @@
-package net.teamti.thaumicintegration.common.item;
+package net.teamti.thaumicintegration.common.item.tcon;
 
 import java.util.Random;
 

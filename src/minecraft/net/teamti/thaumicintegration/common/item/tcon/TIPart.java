@@ -1,4 +1,4 @@
-package net.teamti.thaumicintegration.common.item;
+package net.teamti.thaumicintegration.common.item.tcon;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -39,7 +39,7 @@ public class TIPart extends Item implements IToolPart
 	@Override
 	public int getMaterialID(ItemStack stack)
 	{
-		return stack.getItemDamage();//ModItems.void_id;
+		return stack.getItemDamage();
 	}
 
 }

@@ -29,13 +29,13 @@ public class ModResearch
 
 		ResearchItem research;
 
-		research = new TIResearchItem(LibResearch.TOOLMOD_VOID, LibResearch.CATEGORY_TINKERS, new AspectList().add(Aspect.VOID, 5).add(Aspect.ENTROPY, 5).add(Aspect.TOOL, 3).add(Aspect.ELDRITCH, 1), 0, 0, 2, new ItemStack(ModItems.ToolMod_Void)).registerResearchItem();
+		research = new TIResearchItem(LibResearch.TOOLMOD_VOID, LibResearch.CATEGORY_TINKERS, new AspectList().add(Aspect.VOID, 5).add(Aspect.ENTROPY, 5).add(Aspect.TOOL, 3).add(Aspect.ELDRITCH, 1), -2, 2, 0, new ItemStack(ModItems.ToolMod_Void)).registerResearchItem();
 		research.setPages(new ResearchPage("0"), infusionPage(LibResearch.TOOLMOD_VOID));
 	}
 
 	private static void registerResearchPages()
 	{
-		ResourceLocation background = new ResourceLocation("thaumcraft", "textures/gui/gui_researchback.png");
+		ResourceLocation background = new ResourceLocation("thaumicintegration", "textures/gui/TIResearchBG.png");
 
 		ResearchCategories.registerCategory(LibResearch.CATEGORY_TINKERS, new ResourceLocation(LibResources.MISC_R_TINKEROMANCY), background);
 	}

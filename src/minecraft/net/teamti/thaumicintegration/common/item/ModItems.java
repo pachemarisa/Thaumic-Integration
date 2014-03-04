@@ -7,6 +7,7 @@ import tconstruct.library.tools.HarvestTool;
 import tconstruct.library.tools.ToolCore;
 import tconstruct.modifiers.tools.ModAutoSmelt;
 import thaumcraft.common.lib.Utils;
+import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -21,6 +22,11 @@ import net.minecraftforge.event.ForgeSubscribe;
 import net.minecraftforge.event.world.BlockEvent.HarvestDropsEvent;
 import net.minecraftforge.oredict.OreDictionary;
 import net.teamti.thaumicintegration.common.core.helper.TextHelper;
+import net.teamti.thaumicintegration.common.item.ae.ItemEnum;
+import net.teamti.thaumicintegration.common.item.misc.ItemMod;
+import net.teamti.thaumicintegration.common.item.misc.ItemModFood;
+import net.teamti.thaumicintegration.common.item.tcon.ModVoid;
+import net.teamti.thaumicintegration.common.item.tcon.TIActiveOmniMod;
 import net.teamti.thaumicintegration.common.lib.LibItemIDs;
 import net.teamti.thaumicintegration.common.lib.LibItemNames;
 
@@ -30,15 +36,26 @@ public class ModItems
 
 	public static Item potatoesMashed;
 
-	//public static final int void_id = 201;
-
 	public static void initItems()
 	{
 
-		//TConstructRegistry.addToolMaterial(void_id, "void", 4, 600, 1500, 2, 1.5F, 2, 0.0F, "", "");
-		//TConstructClientRegistry.addMaterialRenderMapping(void_id, "thaumicintegration", "void", true);
+		if (Loader.isModLoaded("AppliedEnergistics"))
+		{
+			
+			for (ItemEnum current : ItemEnum.values())
+			{
+				try
+				{
+					current.setItemInstance(current.getItemClass().getConstructor(int.class).newInstance(current.getID()));
+					GameRegistry.registerItem(current.getItemInstance(), current.getItemInstance().getUnlocalizedName(), "thaumicintegration");
+				}
+				catch (Throwable e)
+				{
+				}
+			}
+		}
 
-		potatoesMashed = new ItemMod(LibItemIDs.idPotatoesMashed).setUnlocalizedName(LibItemNames.POTATOES_MASHED);
+		potatoesMashed = new ItemModFood(LibItemIDs.idPotatoesMashed, 8, 0.8F, true).setUnlocalizedName(LibItemNames.POTATOES_MASHED);
 		ToolMod_Void = new ItemMod(LibItemIDs.idToolmodVoid).setUnlocalizedName(LibItemNames.TOOLMOD_VOID);
 
 		GameRegistry.registerItem(ToolMod_Void, "titanium_pickaxe_head");

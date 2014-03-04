@@ -69,7 +69,7 @@ public class ModRecipes
 		ConfigResearch.recipes.put(name, recipe);
 	}
 
-	private static void registerResearchItemI(String name, Object output, int instability, AspectList aspects, ItemStack input, ItemStack... stuff)
+	static void registerResearchItemI(String name, Object output, int instability, AspectList aspects, ItemStack input, ItemStack... stuff)
 	{
 		registerResearchItemI(name, name, output, instability, aspects, input, stuff);
 	}

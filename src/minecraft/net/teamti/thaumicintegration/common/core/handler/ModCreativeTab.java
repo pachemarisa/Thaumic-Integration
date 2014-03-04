@@ -7,6 +7,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.teamti.thaumicintegration.common.item.ModItems;
+import net.teamti.thaumicintegration.common.item.ae.ItemEnum;
 import net.teamti.thaumicintegration.common.lib.LibMisc;
 
 public class ModCreativeTab extends CreativeTabs
@@ -26,6 +27,9 @@ public class ModCreativeTab extends CreativeTabs
 	@Override
 	public ItemStack getIconItemStack()
 	{
+		if(displayItem == null)
+			addIcon();
+		
 		return displayItem;
 	}
 
@@ -35,6 +39,13 @@ public class ModCreativeTab extends CreativeTabs
 		this.list = list;
 
 		addItem(ModItems.potatoesMashed);
+		addItem(ModItems.ToolMod_Void);
+		addItem(ItemEnum.ESSENTIASTORAGE.getItemInstance());
+	}
+	
+	private void addIcon() {
+		ItemStack wand = new ItemStack(ModItems.ToolMod_Void);
+		displayItem = wand;
 	}
 
 	private void addItem(Item item)
