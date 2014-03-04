@@ -2,8 +2,12 @@ buildscript {
     repositories {
         mavenCentral()
         maven {
-            name = 'ForgeFS'
+            name = 'Forge'
             url = 'http://files.minecraftforge.net/maven'
+        }
+        maven {
+            name = "sonatype"
+            url = "https://oss.sonatype.org/content/repositories/snapshots/"
         }
     }
     dependencies {
