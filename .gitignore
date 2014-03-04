@@ -1,5 +1,7 @@
 /eclipse/
 /forge/
+/bin/
+/download/
 /forge-*-src.zip
 /minecraftforge-*.zip
 /*.ini
@@ -7,3 +9,7 @@
 .DS_Store
 /eclipse  workspace/
 Thumbs.db
+#gradle stuff
+/.gradle
+/build/
+/run/

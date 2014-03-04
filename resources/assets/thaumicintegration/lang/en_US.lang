@@ -1,0 +1,23 @@
+
+# MISC
+itemGroup.ThaumicIntegration=Thaumic Integration
+
+# ITEM NAMES
+item.thaumicintegration:potatoesMashed.name=Mashed Potatoes
+item.thaumicintegration:upgradepartsperditioVoid.name=Voiding Pearl
+
+# ITEM NAMES FOR AE
+item.thaumicintegration:storageessentia.1k.name=ME 1k Essentia Storage
+item.thaumicintegration:storageessentia.4k.name=ME 4k Essentia Storage
+item.thaumicintegration:storageessentia.16k.name=ME 16k Essentia Storage
+item.thaumicintegration:storageessentia.64k.name=ME 64k Essentia Storage
+
+# THAUMCRAFT
+tc.research_category.TI_TINKEROMANCY=Thaumic Intergration
+TI_Research.prefix=[T^I] 
+tc.aspect.confectio=Manufacture, Mass Produce
+
+# Perditio Void
+TI_Research.name.PerditioVoid=Voiding Pearl
+TI_Research.lore.PerditioVoid=I'm sure I dropped that block somewhere...
+TI_Research.page.PerditioVoid.0=By harnessing the power of the void, this modifier, when applied to a Tinker's Construct Tool, will allow it to delete any block it breaks.

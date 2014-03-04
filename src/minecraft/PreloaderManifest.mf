@@ -1,3 +1,0 @@
-Manifest-Version: 1.0
-FMLCorePlugin: net.teamti.thaumicintegration.asm.TICorePlugin
-FMLCorePluginContainsFMLMod: true
