@@ -74,7 +74,6 @@ public class TICorePlugin extends DummyModContainer implements IFMLLoadingPlugin
 		return md;
 	}
 
-	@Override
 	public String[] getLibraryRequestClass()
 	{
 		return null;
